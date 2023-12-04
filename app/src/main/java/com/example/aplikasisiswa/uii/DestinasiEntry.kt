@@ -27,6 +27,8 @@ import com.example.aplikasisiswa.model.EntryViewModel
 import com.example.aplikasisiswa.model.PenyediaViewModel
 import com.example.aplikasisiswa.model.UIStateSiswa
 import com.example.aplikasisiswa.navigasi.DestinasiNavigasi
+import com.example.aplikasisiswa.navigasi.SiswaTopAppBar
+import kotlinx.coroutines.launch
 
 object DestinasiEntry : DestinasiNavigasi{
     override val route = "item_entry"
@@ -47,7 +49,7 @@ fun EntrySiswaScreen(
         topBar = {
             SiswaTopAppBar(
                 title = stringResource(DestinasiEntry.titileRes),
-                canNavigasiBack = true,
+                canNavigateBack = true,
                 scrollBehavior = scrollBehavior
             )
         }
@@ -56,7 +58,7 @@ fun EntrySiswaScreen(
             uiStateSiswa = viewModel.uiStateSiswa,
             onSiwaValueChange = viewModel::updateUiState,
             onSaveClick = {
-                coroutineScope.Launch {
+                coroutineScope.launch {
                     viewModel.saveSiswa()
                     navigateBack()
                 }
