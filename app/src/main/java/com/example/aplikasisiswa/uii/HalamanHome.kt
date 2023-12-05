@@ -28,6 +28,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.aplikasisiswa.R
@@ -93,7 +94,17 @@ fun BodyHome(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
     ){
-
+        if (itemSiswa.isEmpty()){
+            Text(
+                text = stringResource(id = R.string.deskripsi_no_item),
+                textAlign = TextAlign.Center,
+                style = MaterialTheme.typography.titleLarge
+            )
+        } else {
+            ListSiswa(
+                itemSiswa = itemSiswa,
+                modifier = Modifier.padding(horizontal = dimensionResource(id = R.dimen.padding_small)))
+        }
     }
 }
 
