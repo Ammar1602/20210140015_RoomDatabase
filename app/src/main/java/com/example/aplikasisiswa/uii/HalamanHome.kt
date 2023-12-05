@@ -11,6 +11,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Phone
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -22,6 +23,13 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.example.aplikasisiswa.R
 import com.example.aplikasisiswa.data.Siswa
+import com.example.aplikasisiswa.navigasi.DestinasiNavigasi
+
+object DestniasiHome : DestinasiNavigasi{
+    override val route = "home"
+    override val titileRes = R.string.app_name
+}
+
 
 @Composable
 fun BodyHome(
@@ -34,6 +42,14 @@ fun BodyHome(
     ){
 
     }
+}
+
+@Composable
+fun ListSiswa(
+    itemSiswa: List<Siswa>,
+    modifier: Modifier = Modifier
+){
+
 }
 
 @Composable
