@@ -1,5 +1,6 @@
 package com.example.aplikasisiswa.uii
 
+import SiswaTopAppBar
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -27,7 +28,6 @@ import com.example.aplikasisiswa.model.EntryViewModel
 import com.example.aplikasisiswa.model.PenyediaViewModel
 import com.example.aplikasisiswa.model.UIStateSiswa
 import com.example.aplikasisiswa.navigasi.DestinasiNavigasi
-import com.example.aplikasisiswa.navigasi.SiswaTopAppBar
 import kotlinx.coroutines.launch
 
 object DestinasiEntry : DestinasiNavigasi{
